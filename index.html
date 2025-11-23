@@ -1,1 +1,181 @@
-<!-- محتوى تمثيلي لملف index.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - داركو CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-circle">D</div>
+        <div>
+          <strong>Darco CRM</strong>
+          <div style="color: var(--muted); font-size: 13px;">إدارة العملاء والمبيعات</div>
+        </div>
+      </div>
+      <nav class="nav-section">
+        <h4>الرئيسية</h4>
+        <ul class="nav-links">
+          <li><a class="active" href="index.html"><span class="icon">🏠</span>لوحة التحكم</a></li>
+          <li><a href="charts.html"><span class="icon">📊</span>التحليلات</a></li>
+          <li><a href="stock.html"><span class="icon">📦</span>المخزون</a></li>
+          <li><a href="mokhalasat.html"><span class="icon">📄</span>المعاملات</a></li>
+          <li><a href="ifrgh.html"><span class="icon">🧾</span>العقود</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-section">
+        <h4>الحساب</h4>
+        <ul class="nav-links">
+          <li><a href="settings.html"><span class="icon">⚙️</span>الإعدادات</a></li>
+          <li><a href="login.html"><span class="icon">🚪</span>تسجيل الخروج</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="nav-overlay" data-toggle=".sidebar"></div>
+
+    <main class="main">
+      <div class="topbar">
+        <button class="mobile-nav" aria-label="فتح القائمة" data-toggle=".sidebar">☰</button>
+        <div class="search-bar">
+          <span style="opacity:0.7">🔎</span>
+          <input type="search" placeholder="ابحث عن عميل، صفقة، أو فاتورة...">
+        </div>
+        <div class="user-chip">
+          <div class="avatar">RA</div>
+          <div>
+            <div style="font-weight:700">رنا الأحمد</div>
+            <small style="color:var(--muted);">مدير مبيعات</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="card">
+          <h3>إجمالي المبيعات</h3>
+          <div class="value">1.28M ر.س</div>
+          <div class="trend up">▲ +8.3% هذا الشهر</div>
+        </div>
+        <div class="card">
+          <h3>عملاء نشطون</h3>
+          <div class="value">824 عميل</div>
+          <div class="trend up">▲ +42 انضموا خلال 7 أيام</div>
+        </div>
+        <div class="card">
+          <h3>عقود قيد المراجعة</h3>
+          <div class="value">27 عقد</div>
+          <div class="trend amber">⏳ متوسط 3.2 يوم</div>
+        </div>
+        <div class="card">
+          <h3>تحصيلات اليوم</h3>
+          <div class="value">72,300 ر.س</div>
+          <div class="trend down">▼ -3.1% عن الأمس</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <section class="card">
+          <div class="section-title">آخر الصفقات</div>
+          <table class="table">
+            <thead>
+              <tr><th>العميل</th><th>المرحلة</th><th>القيمة</th><th>المسؤول</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>حلول الأفق</td><td><span class="badge blue">تفاوض</span></td><td>180,000 ر.س</td><td>رنا</td></tr>
+              <tr><td>بيتك الذكي</td><td><span class="badge green">مقبول</span></td><td>92,500 ر.س</td><td>يزيد</td></tr>
+              <tr><td>متاجر الخليج</td><td><span class="badge amber">مستندات</span></td><td>61,400 ر.س</td><td>نورة</td></tr>
+              <tr><td>المحيط الأزرق</td><td><span class="badge red">معلق</span></td><td>43,200 ر.س</td><td>فيصل</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="card">
+          <div class="section-title">مهام الفريق اليوم</div>
+          <ul class="list">
+            <li><span><span class="status-dot" style="background: var(--success)"></span>اتصال متابعة مع العميل “أبراج”</span><span class="tag">رنا • 10:30 ص</span></li>
+            <li><span><span class="status-dot" style="background: var(--warning)"></span>تجهيز عرض سعر لعميل حكومي</span><span class="tag">يزيد • 1:00 م</span></li>
+            <li><span><span class="status-dot" style="background: var(--accent)"></span>تحليل بيانات المبيعات الأسبوعية</span><span class="tag">نورة • 3:00 م</span></li>
+            <li><span><span class="status-dot" style="background: var(--danger)"></span>مراجعة عقد “المحيط الأزرق”</span><span class="tag">فيصل • 4:15 م</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="grid-2" style="margin-top:14px;">
+        <section class="card">
+          <div class="section-title">أهم القطاعات</div>
+          <div class="info-grid">
+            <div class="card" style="padding:14px; background:rgba(79,70,229,0.08); border-color:rgba(79,70,229,0.25);">
+              <div style="font-weight:700;">تقنية المعلومات</div>
+              <div style="color:var(--muted);">38 صفقة • 420K</div>
+            </div>
+            <div class="card" style="padding:14px; background:rgba(34,211,238,0.08); border-color:rgba(34,211,238,0.25);">
+              <div style="font-weight:700;">تجزئة</div>
+              <div style="color:var(--muted);">22 صفقة • 310K</div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <div style="font-weight:700;">مقاولات</div>
+              <div style="color:var(--muted);">17 صفقة • 205K</div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <div style="font-weight:700;">تعليم</div>
+              <div style="color:var(--muted);">9 صفقات • 80K</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">خط زمني سريع</div>
+          <ul class="timeline">
+            <li>
+              <div style="font-weight:700;">تم توقيع عقد “بيتك الذكي”</div>
+              <div style="color:var(--muted); font-size:13px;">اليوم • بقيمة 92,500 ر.س</div>
+            </li>
+            <li>
+              <div style="font-weight:700;">إضافة 3 عملاء محتملين من المعرض</div>
+              <div style="color:var(--muted); font-size:13px;">أمس • مسؤول: رنا</div>
+            </li>
+            <li>
+              <div style="font-weight:700;">تحصيل دفعة من “حلول الأفق”</div>
+              <div style="color:var(--muted); font-size:13px;">منذ يومين • 40,000 ر.س</div>
+            </li>
+            <li>
+              <div style="font-weight:700;">انتهاء رخصة دعم فني</div>
+              <div style="color:var(--muted); font-size:13px;">منذ 4 أيام • فريق التقنية</div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="grid-2" style="margin-top:14px;">
+        <section class="card">
+          <div class="section-title">الفواتير المستحقة</div>
+          <table class="table">
+            <thead>
+              <tr><th>العميل</th><th>القيمة</th><th>تاريخ الاستحقاق</th><th>الحالة</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>حلول الأفق</td><td>58,000 ر.س</td><td>12 مارس</td><td><span class="badge amber">بانتظار التحصيل</span></td></tr>
+              <tr><td>بيتك الذكي</td><td>33,700 ر.س</td><td>16 مارس</td><td><span class="badge blue">تم التذكير</span></td></tr>
+              <tr><td>المحيط الأزرق</td><td>24,900 ر.س</td><td>20 مارس</td><td><span class="badge red">متأخر</span></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="card">
+          <div class="section-title">التنبيهات العاجلة</div>
+          <ul class="list">
+            <li><span>انتهاء صلاحية عقد “مستشعرات الطاقة” خلال 5 أيام</span><span class="badge amber">إجراء فوري</span></li>
+            <li><span>عميل جديد ينتظر الرد على عرض السعر</span><span class="badge blue">البريد</span></li>
+            <li><span>ارتفاع استهلاك المخزون لعناصر الشبكات</span><span class="badge red">تنبيه شراء</span></li>
+            <li><span>3 مهام لم يتم إكمالها هذا الأسبوع</span><span class="badge">مراجعة</span></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

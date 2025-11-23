@@ -1,1 +1,107 @@
-<!-- محتوى تمثيلي لملف settings.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإعدادات - داركو CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-circle">D</div>
+        <div>
+          <strong>Darco CRM</strong>
+          <div style="color: var(--muted); font-size: 13px;">إدارة الحساب</div>
+        </div>
+      </div>
+      <nav class="nav-section">
+        <h4>التنقل</h4>
+        <ul class="nav-links">
+          <li><a href="index.html"><span class="icon">🏠</span>لوحة التحكم</a></li>
+          <li><a href="charts.html"><span class="icon">📊</span>التحليلات</a></li>
+          <li><a href="stock.html"><span class="icon">📦</span>المخزون</a></li>
+          <li><a href="mokhalasat.html"><span class="icon">📄</span>المعاملات</a></li>
+          <li><a href="ifrgh.html"><span class="icon">🧾</span>العقود</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-section">
+        <h4>الحساب</h4>
+        <ul class="nav-links">
+          <li><a class="active" href="settings.html"><span class="icon">⚙️</span>الإعدادات</a></li>
+          <li><a href="login.html"><span class="icon">🚪</span>تسجيل الخروج</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="nav-overlay" data-toggle=".sidebar"></div>
+
+    <main class="main">
+      <div class="topbar">
+        <button class="mobile-nav" aria-label="فتح القائمة" data-toggle=".sidebar">☰</button>
+        <div class="section-title" style="margin:0;">إعدادات المستخدم</div>
+        <div class="actions">
+          <button class="btn">إلغاء</button>
+          <button class="btn primary">حفظ التغييرات</button>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <section class="card">
+          <div class="section-title">المعلومات الشخصية</div>
+          <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" value="رنا الأحمد">
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" value="rana@darco.sa">
+          </div>
+          <div class="form-group">
+            <label>الدور الوظيفي</label>
+            <select>
+              <option>مدير مبيعات</option>
+              <option>تنفيذي حسابات</option>
+              <option>دعم فني</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">تفضيلات الإشعارات</div>
+          <div class="list">
+            <label class="list" style="gap:6px;">
+              <span>تنبيهات العقود</span>
+              <input type="checkbox" checked>
+            </label>
+            <label class="list" style="gap:6px;">
+              <span>تذكيرات الفواتير</span>
+              <input type="checkbox" checked>
+            </label>
+            <label class="list" style="gap:6px;">
+              <span>ملخص أسبوعي</span>
+              <input type="checkbox">
+            </label>
+          </div>
+        </section>
+      </div>
+
+      <section class="card" style="margin-top:14px;">
+        <div class="section-title">صلاحيات الفريق</div>
+        <table class="table">
+          <thead>
+            <tr><th>المستخدم</th><th>الدور</th><th>الصلاحية</th><th>الحالة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>يزيد السبيعي</td><td>تنفيذي حسابات</td><td>قراءة/تعديل</td><td><span class="badge green">نشط</span></td></tr>
+            <tr><td>نورة الشهري</td><td>محلل بيانات</td><td>قراءة فقط</td><td><span class="badge blue">محدود</span></td></tr>
+            <tr><td>فيصل الدوسري</td><td>مستشار قانوني</td><td>مراجعة عقود</td><td><span class="badge amber">بانتظار تفعيل</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
