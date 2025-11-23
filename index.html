@@ -35,8 +35,11 @@
       </nav>
     </aside>
 
+    <div class="nav-overlay" data-toggle=".sidebar"></div>
+
     <main class="main">
       <div class="topbar">
+        <button class="mobile-nav" aria-label="فتح القائمة" data-toggle=".sidebar">☰</button>
         <div class="search-bar">
           <span style="opacity:0.7">🔎</span>
           <input type="search" placeholder="ابحث عن عميل، صفقة، أو فاتورة...">
@@ -142,6 +145,32 @@
               <div style="font-weight:700;">انتهاء رخصة دعم فني</div>
               <div style="color:var(--muted); font-size:13px;">منذ 4 أيام • فريق التقنية</div>
             </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="grid-2" style="margin-top:14px;">
+        <section class="card">
+          <div class="section-title">الفواتير المستحقة</div>
+          <table class="table">
+            <thead>
+              <tr><th>العميل</th><th>القيمة</th><th>تاريخ الاستحقاق</th><th>الحالة</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>حلول الأفق</td><td>58,000 ر.س</td><td>12 مارس</td><td><span class="badge amber">بانتظار التحصيل</span></td></tr>
+              <tr><td>بيتك الذكي</td><td>33,700 ر.س</td><td>16 مارس</td><td><span class="badge blue">تم التذكير</span></td></tr>
+              <tr><td>المحيط الأزرق</td><td>24,900 ر.س</td><td>20 مارس</td><td><span class="badge red">متأخر</span></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="card">
+          <div class="section-title">التنبيهات العاجلة</div>
+          <ul class="list">
+            <li><span>انتهاء صلاحية عقد “مستشعرات الطاقة” خلال 5 أيام</span><span class="badge amber">إجراء فوري</span></li>
+            <li><span>عميل جديد ينتظر الرد على عرض السعر</span><span class="badge blue">البريد</span></li>
+            <li><span>ارتفاع استهلاك المخزون لعناصر الشبكات</span><span class="badge red">تنبيه شراء</span></li>
+            <li><span>3 مهام لم يتم إكمالها هذا الأسبوع</span><span class="badge">مراجعة</span></li>
           </ul>
         </section>
       </div>

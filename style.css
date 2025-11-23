@@ -29,6 +29,18 @@ body {
   min-height: 100vh;
 }
 
+body.light {
+  --bg: #f7f8fb;
+  --panel: #ffffff;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --muted: #4b5563;
+  background: radial-gradient(circle at 12% 20%, rgba(79, 70, 229, 0.05), transparent 32%),
+              radial-gradient(circle at 85% 12%, rgba(34, 211, 238, 0.06), transparent 30%),
+              linear-gradient(135deg, #eef2ff 0%, #f8fafc 60%, #eef2ff 100%);
+}
+
 .app-shell {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -400,7 +412,75 @@ body {
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
 }
 
+.mobile-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar.open ~ .nav-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.light .card,
+body.light .sidebar,
+body.light .login-card,
+body.light .search-bar,
+body.light .user-chip {
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+}
+
+body.light .login-card,
+body.light .search-bar,
+body.light .user-chip {
+  background: #ffffff;
+}
+
+body.light .nav-links a:hover,
+body.light .nav-links a.active {
+  color: var(--primary);
+  background: rgba(79, 70, 229, 0.12);
+}
+
+body.light .badge { border-color: rgba(0,0,0,0.05); }
+
+@media (max-width: 1080px) {
+  .topbar { flex-wrap: wrap; }
+  .actions { width: 100%; justify-content: flex-end; }
+}
+
 @media (max-width: 960px) {
   .app-shell { grid-template-columns: 1fr; }
-  .sidebar { position: relative; height: auto; flex-direction: column; }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: 10;
+    height: 100vh;
+    width: 260px;
+  }
+
+  .sidebar.open { transform: translateX(0); }
+  .main { padding: 18px; }
+  .topbar { position: sticky; top: 0; background: var(--bg); z-index: 5; padding: 8px 0; }
+  .mobile-nav { display: inline-flex; }
 }

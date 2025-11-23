@@ -7,6 +7,13 @@ toggleButtons.forEach((btn) => {
   });
 });
 
+const sidebarLinks = document.querySelectorAll('.sidebar .nav-links a');
+if (sidebarLinks.length) {
+  sidebarLinks.forEach((link) => link.addEventListener('click', () => {
+    document.querySelector('.sidebar')?.classList.remove('open');
+  }));
+}
+
 const themeSwitcher = document.querySelector('#theme-switch');
 if (themeSwitcher) {
   themeSwitcher.addEventListener('change', () => {
