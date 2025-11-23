@@ -1,1 +1,113 @@
-<!-- محتوى تمثيلي لملف mokhalasat.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المعاملات - داركو CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-circle">D</div>
+        <div>
+          <strong>Darco CRM</strong>
+          <div style="color: var(--muted); font-size: 13px;">الفواتير والتحصيل</div>
+        </div>
+      </div>
+      <nav class="nav-section">
+        <h4>التنقل</h4>
+        <ul class="nav-links">
+          <li><a href="index.html"><span class="icon">🏠</span>لوحة التحكم</a></li>
+          <li><a href="charts.html"><span class="icon">📊</span>التحليلات</a></li>
+          <li><a href="stock.html"><span class="icon">📦</span>المخزون</a></li>
+          <li><a class="active" href="mokhalasat.html"><span class="icon">📄</span>المعاملات</a></li>
+          <li><a href="ifrgh.html"><span class="icon">🧾</span>العقود</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-section">
+        <h4>الحساب</h4>
+        <ul class="nav-links">
+          <li><a href="settings.html"><span class="icon">⚙️</span>الإعدادات</a></li>
+          <li><a href="login.html"><span class="icon">🚪</span>تسجيل الخروج</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="search-bar">
+          <span style="opacity:0.7">🔎</span>
+          <input type="search" placeholder="بحث في الفواتير، الدفعات، والتحصيلات...">
+        </div>
+        <div class="actions">
+          <button class="btn">تحميل تقرير</button>
+          <button class="btn primary">فاتورة جديدة</button>
+        </div>
+      </div>
+
+      <section class="card">
+        <div class="section-title">الفواتير المفتوحة</div>
+        <table class="table">
+          <thead>
+            <tr><th>#</th><th>العميل</th><th>القيمة</th><th>تاريخ الاستحقاق</th><th>الحالة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>INV-1024</td><td>حلول الأفق</td><td>74,000</td><td>15 فبراير</td><td><span class="badge amber">قيد الدفع</span></td></tr>
+            <tr><td>INV-1021</td><td>متاجر الخليج</td><td>28,500</td><td>12 فبراير</td><td><span class="badge green">مدفوعة</span></td></tr>
+            <tr><td>INV-1019</td><td>بيتك الذكي</td><td>48,300</td><td>5 فبراير</td><td><span class="badge red">متأخرة</span></td></tr>
+            <tr><td>INV-1017</td><td>المحيط الأزرق</td><td>36,200</td><td>2 فبراير</td><td><span class="badge amber">قيد الدفع</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="grid-2" style="margin-top:14px;">
+        <section class="card">
+          <div class="section-title">آخر التحصيلات</div>
+          <ul class="list">
+            <li><span>دفعة إلكترونية من “حلول الأفق”</span><span class="badge green">40,000 ر.س</span></li>
+            <li><span>شيك مستلم من “المحيط الأزرق”</span><span class="badge amber">18,000 ر.س</span></li>
+            <li><span>تحويل بنكي من “بيتك الذكي”</span><span class="badge green">22,500 ر.س</span></li>
+            <li><span>تسوية رسوم دعم فني</span><span class="badge blue">6,200 ر.س</span></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="section-title">مهام الفواتير</div>
+          <div class="cards-stack">
+            <div class="card" style="padding:14px;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong>مطالبة دفع</strong>
+                  <div style="color:var(--muted); font-size:13px;">متاجر الخليج • مستحق خلال 3 أيام</div>
+                </div>
+                <button class="btn">إرسال تذكير</button>
+              </div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong>مراجعة ضريبة</strong>
+                  <div style="color:var(--muted); font-size:13px;">حلول الأفق • فبراير</div>
+                </div>
+                <button class="btn">فتح التفاصيل</button>
+              </div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong>تأكيد عنوان شحن</strong>
+                  <div style="color:var(--muted); font-size:13px;">بيتك الذكي</div>
+                </div>
+                <button class="btn">تم</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

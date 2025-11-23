@@ -1,1 +1,107 @@
-<!-- محتوى تمثيلي لملف stock.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المخزون - داركو CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-circle">D</div>
+        <div>
+          <strong>Darco CRM</strong>
+          <div style="color: var(--muted); font-size: 13px;">إدارة المخزون</div>
+        </div>
+      </div>
+      <nav class="nav-section">
+        <h4>التنقل</h4>
+        <ul class="nav-links">
+          <li><a href="index.html"><span class="icon">🏠</span>لوحة التحكم</a></li>
+          <li><a href="charts.html"><span class="icon">📊</span>التحليلات</a></li>
+          <li><a class="active" href="stock.html"><span class="icon">📦</span>المخزون</a></li>
+          <li><a href="mokhalasat.html"><span class="icon">📄</span>المعاملات</a></li>
+          <li><a href="ifrgh.html"><span class="icon">🧾</span>العقود</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-section">
+        <h4>الحساب</h4>
+        <ul class="nav-links">
+          <li><a href="settings.html"><span class="icon">⚙️</span>الإعدادات</a></li>
+          <li><a href="login.html"><span class="icon">🚪</span>تسجيل الخروج</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="section-title" style="margin:0;">مراقبة المخزون</div>
+        <div class="actions">
+          <button class="btn">تصدير CSV</button>
+          <button class="btn primary">إضافة صنف</button>
+        </div>
+      </div>
+
+      <section class="card">
+        <div class="section-title">حالة المستودع</div>
+        <div class="kpi-grid" style="margin-bottom:0; grid-template-columns: repeat(auto-fit,minmax(200px,1fr));">
+          <div class="card" style="padding:14px;">
+            <h3>العناصر النشطة</h3>
+            <div class="value">248</div>
+            <div class="trend up">+12 أصناف هذا الشهر</div>
+          </div>
+          <div class="card" style="padding:14px;">
+            <h3>إجمالي الكمية</h3>
+            <div class="value">6,420 وحدة</div>
+            <div class="trend amber">⏳ إعادة طلب لـ 9 عناصر</div>
+          </div>
+          <div class="card" style="padding:14px;">
+            <h3>تكلفة المخزون</h3>
+            <div class="value">812K ر.س</div>
+            <div class="trend down">▼ -2.5% بسبب تصفية</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:14px;">
+        <div class="section-title">تفاصيل الأصناف</div>
+        <table class="table">
+          <thead>
+            <tr><th>الصنف</th><th>الكمية</th><th>المستودع</th><th>الحالة</th><th>الحركة الأخيرة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>موزع إنترنت ذكي</td><td>320</td><td>الرياض</td><td><span class="badge green">متوفر</span></td><td>استلام • أمس</td></tr>
+            <tr><td>كابلات ألياف 50م</td><td>80</td><td>جدة</td><td><span class="badge amber">إعادة طلب</span></td><td>صرف • اليوم</td></tr>
+            <tr><td>كاميرا مراقبة 4K</td><td>140</td><td>الرياض</td><td><span class="badge green">متوفر</span></td><td>تحويل • منذ 3 أيام</td></tr>
+            <tr><td>مستشعر حركة</td><td>0</td><td>مستودع شرقي</td><td><span class="badge red">نفد</span></td><td>صرف كامل</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="grid-2" style="margin-top:14px;">
+        <section class="card">
+          <div class="section-title">سلاسل التوريد</div>
+          <ul class="timeline">
+            <li><div style="font-weight:700;">وصول شحنة أجهزة واي فاي</div><div style="color:var(--muted); font-size:13px;">20 فبراير • ميناء جدة</div></li>
+            <li><div style="font-weight:700;">تفويض استيراد حساسات</div><div style="color:var(--muted); font-size:13px;">28 فبراير • جمرك الدمام</div></li>
+            <li><div style="font-weight:700;">تفتيش جودة للكاميرات</div><div style="color:var(--muted); font-size:13px;">3 مارس • مستودع الرياض</div></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="section-title">طلبات قيد التنفيذ</div>
+          <ul class="list">
+            <li><span>توريد 50 كاميرا لـ “متاجر الخليج”</span><span class="badge amber">جاهز للشحن</span></li>
+            <li><span>تركيب 30 موزع إنترنت</span><span class="badge green">يتم الآن</span></li>
+            <li><span>استبدال 12 كابل ألياف</span><span class="badge blue">تمت الجدولة</span></li>
+            <li><span>توريد 60 مستشعر حركة</span><span class="badge red">بانتظار توفر</span></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

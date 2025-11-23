@@ -1,1 +1,115 @@
-<!-- محتوى تمثيلي لملف charts.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التحليلات - داركو CRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-circle">D</div>
+        <div>
+          <strong>Darco CRM</strong>
+          <div style="color: var(--muted); font-size: 13px;">تقارير الأداء</div>
+        </div>
+      </div>
+      <nav class="nav-section">
+        <h4>التنقل</h4>
+        <ul class="nav-links">
+          <li><a href="index.html"><span class="icon">🏠</span>لوحة التحكم</a></li>
+          <li><a class="active" href="charts.html"><span class="icon">📊</span>التحليلات</a></li>
+          <li><a href="stock.html"><span class="icon">📦</span>المخزون</a></li>
+          <li><a href="mokhalasat.html"><span class="icon">📄</span>المعاملات</a></li>
+          <li><a href="ifrgh.html"><span class="icon">🧾</span>العقود</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-section">
+        <h4>الحساب</h4>
+        <ul class="nav-links">
+          <li><a href="settings.html"><span class="icon">⚙️</span>الإعدادات</a></li>
+          <li><a href="login.html"><span class="icon">🚪</span>تسجيل الخروج</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <div class="section-title" style="margin:0;">لوحة التحليلات</div>
+          <div style="color:var(--muted);">نظرة على قنوات الإيرادات وأداء الفِرق</div>
+        </div>
+        <label class="user-chip" style="cursor:pointer;">
+          <input id="theme-switch" type="checkbox" style="accent-color: var(--primary);"> وضع مضيء
+        </label>
+      </div>
+
+      <div class="grid-2">
+        <section class="card">
+          <div class="section-title">تقدم المبيعات الربع الحالي</div>
+          <div style="display:grid; gap:10px; margin-top:6px;">
+            <div>
+              <div style="display:flex; justify-content:space-between;">
+                <strong>القناة الرقمية</strong><span style="color:var(--muted);">82% من الهدف</span>
+              </div>
+              <div data-progress="82" style="height:10px; border-radius:10px; background:rgba(255,255,255,0.06);"></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between;">
+                <strong>المعارض والمؤتمرات</strong><span style="color:var(--muted);">64% من الهدف</span>
+              </div>
+              <div data-progress="64" style="height:10px; border-radius:10px; background:rgba(255,255,255,0.06);"></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between;">
+                <strong>الشركاء</strong><span style="color:var(--muted);">58% من الهدف</span>
+              </div>
+              <div data-progress="58" style="height:10px; border-radius:10px; background:rgba(255,255,255,0.06);"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">صحة خط المبيعات</div>
+          <div class="kpi-grid" style="margin-bottom:0; grid-template-columns: repeat(auto-fit,minmax(160px,1fr));">
+            <div class="card" style="padding:14px;">
+              <h3>صفقات جديدة</h3>
+              <div class="value">126</div>
+              <div class="trend up">+18% عن الشهر الماضي</div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <h3>قيمة متوقعة</h3>
+              <div class="value">320K ر.س</div>
+              <div class="trend amber">⏳ متوسط 24 يوم</div>
+            </div>
+            <div class="card" style="padding:14px;">
+              <h3>معدل الفوز</h3>
+              <div class="value">41%</div>
+              <div class="trend up">▲ steady</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="section-title">أفضل 5 عملاء حسب الإيراد</div>
+        <table class="table">
+          <thead>
+            <tr><th>العميل</th><th>القيمة السنوية</th><th>آخر تفاعل</th><th>الحالة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>حلول الأفق</td><td>420,000 ر.س</td><td>قبل 2 يوم</td><td><span class="badge green">مستمر</span></td></tr>
+            <tr><td>المحيط الأزرق</td><td>310,000 ر.س</td><td>اليوم</td><td><span class="badge amber">قيد التجديد</span></td></tr>
+            <tr><td>متاجر الخليج</td><td>280,000 ر.س</td><td>قبل 5 أيام</td><td><span class="badge blue">فرصة توسعة</span></td></tr>
+            <tr><td>بيتك الذكي</td><td>190,000 ر.س</td><td>قبل 1 يوم</td><td><span class="badge green">مستمر</span></td></tr>
+            <tr><td>دروب التقنية</td><td>165,000 ر.س</td><td>قبل 3 أيام</td><td><span class="badge red">مهدد</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
