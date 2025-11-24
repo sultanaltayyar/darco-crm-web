@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROSHN CoE Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+    />
+    <style>
+      body {
+        background-color: #020617;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" data-presets="env,react">
+      // Simple React UI concept for AbuOmar's ROSHN CoE preparation program dashboard
+      // This is just a structural mockup; styling is provided via Tailwind CDN in this demo.
+
+      function RoshnCoEDashboard() {
+        return (
+          <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col items-center py-10 px-4">
+            <div className="w-full max-w-5xl space-y-8">
+              {/* Header */}
+              <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+                    برنامج التأهيل لوظيفة Assistant Manager, Shared Services CoE – ROSHN
+                  </h1>
+                  <p className="mt-2 text-sm md:text-base text-slate-300">
+                    لوحة تحكم شخصية لأبوعمر لمتابعة المراحل، المهام، والاختبارات حتى الجاهزية الكاملة.
+                  </p>
+                </div>
+                <div className="flex flex-col items-end text-sm text-slate-300">
+                  <span>المتدرّب: سلطان منصور الطيار (أبوعمر)</span>
+                  <span>حالة البرنامج: قيد الإطلاق – Phase 0</span>
+                </div>
+              </header>
+
+              {/* Progress summary cards */}
+              <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 flex flex-col gap-1">
+                  <span className="text-xs text-slate-400">نسبة التقدم الكلية</span>
+                  <span className="text-2xl font-bold">0%</span>
+                  <span className="text-xs text-slate-500">تُحتسب تلقائياً من المراحل والمهام المكتملة</span>
+                </div>
+                <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 flex flex-col gap-1">
+                  <span className="text-xs text-slate-400">عدد المراحل</span>
+                  <span className="text-2xl font-bold">4</span>
+                  <span className="text-xs text-slate-500">Phase 0 → Phase 3</span>
+                </div>
+                <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 flex flex-col gap-1">
+                  <span className="text-xs text-slate-400">المهام المفتوحة الآن</span>
+                  <span className="text-2xl font-bold">3</span>
+                  <span className="text-xs text-slate-500">مرحلة 0: تشخيص المستوى</span>
+                </div>
+                <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 flex flex-col gap-1">
+                  <span className="text-xs text-slate-400">الاختبارات المجدولة</span>
+                  <span className="text-2xl font-bold">4</span>
+                  <span className="text-xs text-slate-500">اختبار نهاية كل مرحلة</span>
+                </div>
+              </section>
+
+              {/* Phases timeline */}
+              <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 space-y-4">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-semibold">مراحل البرنامج</h2>
+                  <span className="text-xs text-slate-400">من Phase 0 حتى Phase 3</span>
+                </div>
+                <div className="space-y-3">
+                  {[
+                    {
+                      id: 0,
+                      title: "Phase 0 – تشخيص المستوى",
+                      status: "current",
+                      description:
+                        "قياس مستوى الإكسل، كتابة التقارير بالإنجليزية، وطريقة التفكير في إدارة المشاريع.",
+                    },
+                    {
+                      id: 1,
+                      title: "Phase 1 – أساسيات PMO + Excel قوي",
+                      status: "upcoming",
+                      description:
+                        "بناء Project Tracker حقيقي، وصقل مهارات الإكسل المرتبطة به.",
+                    },
+                    {
+                      id: 2,
+                      title: "Phase 2 – Power BI & Reporting",
+                      status: "upcoming",
+                      description:
+                        "إنشاء لوحة معلومات (Dashboard) لمبادرات Shared Services.",
+                    },
+                    {
+                      id: 3,
+                      title: "Phase 3 – IT & Digital Context + Portfolio + Interview Prep",
+                      status: "upcoming",
+                      description:
+                        "تجميع Portfolio والاستعداد للمقابلات بأسئلة وأجوبة عملية.",
+                    },
+                  ].map((phase) => (
+                    <div
+                      key={phase.id}
+                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 rounded-2xl border border-slate-800 bg-slate-950/60 p-4"
+                    >
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <div
+                            className={`h-2 w-2 rounded-full ${
+                              phase.status === "current"
+                                ? "bg-emerald-400"
+                                : phase.status === "done"
+                                ? "bg-sky-400"
+                                : "bg-slate-500"
+                            }`}
+                          />
+                          <h3 className="font-semibold">{phase.title}</h3>
+                        </div>
+                        <p className="mt-1 text-sm text-slate-300">{phase.description}</p>
+                      </div>
+                      <div className="flex flex-col items-start md:items-end text-xs text-slate-400 gap-1">
+                        <span>الحالة: {phase.status === "current" ? "جارية" : "لم تبدأ"}</span>
+                        <span>نسبة إنجاز تقديرية: 0%</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* Current phase tasks */}
+              <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 space-y-4">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-semibold">مهام المرحلة الحالية – Phase 0</h2>
+                  <span className="text-xs text-slate-400">تشخيص المستوى قبل الانطلاق</span>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    {
+                      id: 1,
+                      title: "إنشاء وملء Project Tracker أولي (10–15 صف)",
+                      type: "تطبيق",
+                      status: "لم يبدأ",
+                    },
+                    {
+                      id: 2,
+                      title: "كتابة Weekly Update بالإنجليزية (5–7 أسطر)",
+                      type: "تعلم / تواصل",
+                      status: "لم يبدأ",
+                    },
+                    {
+                      id: 3,
+                      title: "وصف مشروع حقيقي بالعربية بصيغة Project Case",
+                      type: "تحويل الخبرة إلى مشروع",
+                      status: "لم يبدأ",
+                    },
+                  ].map((task) => (
+                    <div
+                      key={task.id}
+                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 rounded-xl border border-slate-800 bg-slate-950/60 p-3"
+                    >
+                      <div>
+                        <p className="text-sm font-medium">{task.title}</p>
+                        <p className="text-xs text-slate-400 mt-1">نوع المهمة: {task.type}</p>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs">
+                        <span className="px-2 py-1 rounded-full border border-slate-700 bg-slate-900/80">
+                          الحالة: {task.status}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* Exams overview */}
+              <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 space-y-4 mb-10">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-semibold">اختبارات المراحل</h2>
+                  <span className="text-xs text-slate-400">تأكيد الجاهزية في نهاية كل Phase</span>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    "اختبار Phase 0 – تشخيص الإكسل والتقارير",
+                    "اختبار Phase 1 – بناء Tracker وتحليل بسيط",
+                    "اختبار Phase 2 – إنشاء Dashboard في Power BI",
+                    "اختبار Phase 3 – محاكاة مقابلة لوظيفة Assistant Manager, CoE",
+                  ].map((exam, idx) => (
+                    <div
+                      key={idx}
+                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 rounded-xl border border-slate-800 bg-slate-950/60 p-3"
+                    >
+                      <span className="text-sm">{exam}</span>
+                      <span className="text-xs text-slate-400">الحالة: لم يُجدول بعد</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+          </div>
+        );
+      }
+
+      const rootElement = document.getElementById("root");
+      ReactDOM.createRoot(rootElement).render(<RoshnCoEDashboard />);
+    </script>
+  </body>
+</html>
